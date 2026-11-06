@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BADDIE LASH</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff7fa;
+    color: #21151b;
+}
+
+header {
+    background: #171217;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #f4a9c8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.hero {
+    background: #f5c8da;
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+}
+
+.hero h1 span {
+    color: #c43d78;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #634653;
+}
+
+.button {
+    display: inline-block;
+    background: #171217;
+    color: white;
+    padding: 14px 30px;
+    margin-top: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #88717b;
+    margin-bottom: 40px;
+}
+
+/* Lash products */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #f0d5e1;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.lash-box {
+    background: linear-gradient(145deg, #f9dce8, #f3b8d0);
+    margin: 15px;
+    padding: 25px 15px;
+    min-height: 240px;
+    border: 1px solid #e9a6c3;
+    box-shadow: 0 5px 12px #dca1ba55;
+}
+
+.package-title {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.lash {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2px;
+    margin: 7px auto;
+    max-width: 280px;
+    border-bottom: 2px solid #b47a91;
+}
+
+.lash span {
+    display: block;
+    width: 3px;
+    background: #171217;
+    border-radius: 100% 100% 0 0;
+    transform-origin: bottom;
+}
+
+.lash span:nth-child(odd) {
+    transform: rotate(-12deg);
+}
+
+.lash span:nth-child(even) {
+    transform: rotate(12deg);
+}
+
+.lash.natural span {
+    height: 18px;
+}
+
+.lash.wispy span {
+    height: 25px;
+}
+
+.lash.anime span {
+    height: 17px;
+}
+
+.lash.anime span:nth-child(5n) {
+    height: 32px;
+}
+
+.lash.volume span {
+    height: 28px;
+    width: 4px;
+}
+
+.lash.cat span {
+    height: 22px;
+}
+
+.lash.cat span:nth-last-child(-n+5) {
+    height: 35px;
+}
+
+.lash.doll span {
+    height: 20px;
+}
+
+.lash.doll span:nth-child(n+10):nth-child(-n+20) {
+    height: 35px;
+}
+
+.product-info {
+    padding: 15px 20px 25px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+}
+
+.product-info p {
+    font-size: 12px;
+    color: #877780;
+    margin: 10px 0;
+}
+
+.price {
+    color: #d33d7c;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.product button {
+    background: #171217;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.product button:hover {
+    background: #d33d7c;
+}
+
+.banner {
+    background: #171217;
+    color: #f5c8da;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #f5c8da;
+    font-size: 12px;
+}
+
+@media(max-width: 700px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    nav {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BADDIE <span>LASH</span></div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#shop">SHOP LASHES</a>
+        <a href="#about">ABOUT US</a>
+    </nav>
+
+    <div>🛍 BAG <span id="cart">0</span></div>
+</header>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+    <h1>Be Bold. <span>Be a Baddie.</span></h1>
+
+    <p>Find your perfect lash style. From natural beauty to dramatic glam.</p>
+
+    <a href="#shop" class="button">SHOP NOW</a>
+</div>
+
+<!-- PRODUCTS -->
+
+<section id="shop">
+
+    <h2 class="section-title">Best Sellers</h2>
+
+    <p class="subtitle">
+        Choose your lash style and create your own beauty look.
+    </p>
+
+    <div class="products">
+
+        <!-- Natural -->
+
+        <div class="product">
+            <div class="lash-box">
+                <div class="package-title">BADDIE LASH</div>
+
+                <div class="lash natural">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <div class="lash natural">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <p>01 NATURAL</p>
+            </div>
+
+            <div class="product-info">
+                <h3>NATURAL BABE</h3>
+                <p>Soft and natural everyday lashes.</p>
+                <div class="price">$10.00</div>
+                <button onclick="addToCart()">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- Wispy -->
+
+        <div class="product">
+            <div class="lash-box">
+                <div class="package-title">BADDIE LASH</div>
+
+                <div class="lash wispy">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <div class="lash wispy">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <p>02 WISPY</p>
+            </div>
+
+            <div class="product-info">
+                <h3>WISPY BADDIE</h3>
+                <p>Fluffy, soft and perfectly spiky.</p>
+                <div class="price">$12.00</div>
+                <button onclick="addToCart()">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- Anime -->
+
+        <div class="product">
+            <div class="lash-box">
+                <div class="package-title">BADDIE LASH</div>
+
+                <div class="lash anime">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <div class="lash anime">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <p>03 ANIME</p>
+            </div>
+
+            <div class="product-info">
+                <h3>ANIME DOLL</h3>
+                <p>Spiky lashes for a cute doll-eye look.</p>
+                <div class="price">$14.00</div>
+                <button onclick="addToCart()">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- Cat Eye -->
+
+        <div class="product">
+            <div class="lash-box">
+                <div class="package-title">BADDIE LASH</div>
+
+                <div class="lash cat">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <div class="lash cat">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <p>04 CAT EYE</p>
+            </div>
+
+            <div class="product-info">
+                <h3>CAT EYE QUEEN</h3>
+                <p>Long outer corners for a lifted look.</p>
+                <div class="price">$13.00</div>
+                <button onclick="addToCart()">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- Doll Eye -->
+
+        <div class="product">
+            <div class="lash-box">
+                <div class="package-title">BADDIE LASH</div>
+
+                <div class="lash doll">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <div class="lash doll">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <p>05 DOLL EYE</p>
+            </div>
+
+            <div class="product-info">
+                <h3>DOLL EYES</h3>
+                <p>Full center lashes for round eyes.</p>
+                <div class="price">$15.00</div>
+                <button onclick="addToCart()">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- Volume -->
+
+        <div class="product">
+            <div class="lash-box">
+                <div class="package-title">BADDIE LASH</div>
+
+                <div class="lash volume">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <div class="lash volume">
+                    <script>
+                    for(let i=0;i<30;i++){
+                        document.write("<span></span>");
+                    }
+                    </script>
+                </div>
+
+                <p>06 VOLUME</p>
+            </div>
+
+            <div class="product-info">
+                <h3>VOLUME BADDIE</h3>
+                <p>Extra thick lashes for full glam.</p>
+                <div class="price">$16.00</div>
+                <button onclick="addToCart()">ADD TO BAG</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="banner">
+    <h2>Good Lashes. Bad Intentions.</h2>
+    <p>BE CONFIDENT. BE BEAUTIFUL. BE A BADDIE.</p>
+</div>
+
+<section id="about">
+    <h2 class="section-title">About BADDIE LASH</h2>
+
+    <p class="subtitle">
+        BADDIE LASH is made for every girl who loves bold,
+        beautiful and confident lash looks.
+    </p>
+</section>
+
+<footer>
+    © 2026 BADDIE LASH STUDIO
+</footer>
+
+<script>
+let count = 0;
+
+function addToCart() {
+    count++;
+    document.getElementById("cart").innerText = count;
+    alert("Added to bag!");
+}
+</script>
+
+</body>
+</html>
